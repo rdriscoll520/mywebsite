@@ -9,6 +9,7 @@ const Projects = () => {
                     <li>Project2</li>
                     <li>Project3</li>
                 </ul>
+                <div className="section-divider"></div>
         </section>
     )
 }

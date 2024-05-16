@@ -1,14 +1,20 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
     return (
-        <header>
-            <h1>Rory Driscoll</h1>
+        <header style={{ position: 'relative', width: '100%' }}>
+            <button onClick={toggleSidebar} className="menu-icon">
+                <FontAwesomeIcon icon={faBars} />
+            </button>
+            <h1 style={{ textAlign: 'center' }}>Rory Driscoll</h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
         </header>
