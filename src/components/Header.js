@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Header = ({ toggleSidebar }) => {
     return (
-        <header style={{ position: 'relative', width: '100%' }}>
+        <header style={{ position: 'fixed', width: '100%', zIndex: 1000, top: 0 }}>
             <button onClick={toggleSidebar} className="menu-icon">
                 <FontAwesomeIcon icon={faBars} />
             </button>

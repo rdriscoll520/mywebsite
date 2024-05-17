@@ -13,22 +13,22 @@ function App() {
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
-};
+  };
 
   return (
     <Router>
       <div className="App">
         <Header toggleSidebar={toggleSidebar} />
-        <div className="content-area">
-        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-        <main>
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<About />} />
-          </Routes>
-        </main>
+        <div className={`content-area ${isOpen ? 'open' : ''}`}>
+          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+          <main>
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<About />} />
+            </Routes>
+          </main>
         </div>
         <Footer />
       </div>

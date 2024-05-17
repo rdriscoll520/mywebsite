@@ -1,17 +1,16 @@
 .sidebar {
     width: 280px;
+    height: 100%;
     position: fixed;
-    left: 0;
+    left: -280px; /* Start offscreen */
     top: 0;
     bottom: 0;
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
-    border-right: 1px solid #ececec;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
-    overflow-y: auto;
-    z-index: 1000;
+    transition: left 0.3s ease-out;
+    z-index: 1050; /* Higher than the page content but below modal dialogs if any */
+    overflow-y: auto; /* For scrollable sidebar content */
 }
+
 .sidebar-nav {
     display: flex;
     flex-direction: column;
@@ -21,9 +20,8 @@
 }
 
 .sidebar.open {
-    transform: translateX(0);
+    left: 0; /* Move into view */
 }
-
 
 .sidebar-header {
     display: flex;
