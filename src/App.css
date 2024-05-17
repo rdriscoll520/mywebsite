@@ -1,36 +1,83 @@
 /* General styles for body, header, etc. */
-
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #ffffffd1;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
+  background: linear-gradient(135deg, #007BFF 0%, #333 100%);
+  background-size: cover;
+  padding: 20px 0;
   text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  border-bottom: 5px solid #093b70;
+}
+
+@media (min-width: 1200px) {
+  section {
+    margin: 40px auto;  /* Centering the section */
+    padding: 30px;
+    max-width: 80%;  /* Or another suitable percentage */
+  }
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+.menu-icon {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  left: 20px;
+  top: 10%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.menu-icon:hover {
+  color: #007BFF; /* Blue highlight on hover */
+  transform: scale(1.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
+  margin: 0;
 }
 
 header nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.0rem;
+  padding: 0px 20px;
+  transition: color 0.3s, background-color 0.3s, transform 0.2s;
 }
 
-main {
-  padding: 20px;
+header nav ul li a:hover, header nav ul li a:focus {
+  color: #007BFF; /* Blue highlight on hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transform: translateY(-3px);
 }
 
 section {
@@ -40,28 +87,85 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Creates as many columns as can fit */
+}
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
+@media (min-width: 1200px) {
+  .skills p {
+    font-size: 1.5rem;  /* Slightly larger */
+    padding: 15px 0;  /* More vertical padding */
+  }
+}
+
+
+.skills svg, .skills span {
+  margin-right: 10px;
+  color: #3289e7; /* Adjust color to fit your design */
+  display: inline-block;
+  width: 20px; /* Ensure consistent sizing */
+  text-align: center;
+}
+
+.skills span {
+  background: #000000; /* Light grey background */
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+@media (min-width: 1200px) {
+  h2, h3, p {
+    font-size: larger; /* Increase the font size */
+  }
+}
+
+h2, h3{
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  color: #333;
+  position: relative;
+}
+
+h2:before, h3:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #007BFF;
+}
+
+.section-divider {
+  border-top: 2px solid #eee;
+  margin-top: 40px;
 }
 
 section p, section ul {
-  margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+.icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #007BFF;
 }
 
 footer {
-  background-color: #333;
+  background-color: #333; /* Dark grey footer */
   color: white;
   text-align: center;
   padding: 10px 0;
 }
+header, footer {
+  width: 100%;
+}
+
+
 
 /* Specific styles for contact form */
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -86,7 +190,7 @@ footer {
 .contact-form textarea {
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Light grey border for inputs */
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
@@ -94,13 +198,13 @@ footer {
 
 .contact-form textarea {
   resize: vertical;
-  height: 100px; /* Adjust height as needed */
+  height: 100px; /* Adjustable height */
 }
 
 .contact-form button {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #333;
+  background-color: #333; /* Dark grey button */
   color: white;
   border: none;
   border-radius: 5px;
@@ -109,16 +213,26 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color: #555;
+  background-color: #555; /* Darker grey on hover */
 }
 
 .contact-form p {
   margin: 5px 0;
 }
 
-/* Dividers between sections */
-
 .section-divider {
-  border-top: 2px solid #333;
+  border-top: 2px solid #333; /* Dark grey divider */
   margin: 40px 0;
 }
+
+.profile-pic {
+  width: 100px; /* Adjust the size as needed */
+  height: 120px; /* Keep the aspect ratio square */
+  border-radius: 50%; /* Circle shape */
+  margin: 10px 0; /* Margin above and below */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  display: block; /* Ensures the image is centered if no other content is on its line */
+  margin-left: auto; /* Centers the image horizontally */
+  margin-right: auto;
+}
+

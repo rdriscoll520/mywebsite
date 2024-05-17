@@ -5,8 +5,8 @@ const Projects = () => {
         <section id="projects">
             <h2>Projects</h2>
                 <ul>
-                    <li>Project1</li>
-                    <li>Project2</li>
+                    <li>Pet Adoption Agency</li>
+                    <li>Retro Game Arcade</li>
                     <li>Project3</li>
                 </ul>
                 <div className="section-divider"></div>

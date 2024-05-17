@@ -4,40 +4,61 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #333; 
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     border-right: 1px solid #ececec;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transform: translateX(-100%);
     transition: transform 0.3s ease-out;
     overflow-y: auto;
     z-index: 1000;
+}
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    height: 100%; /* Take full height of its container */
+    padding: 20px 0; /* Provide some padding around */
 }
 
 .sidebar.open {
     transform: translateX(0);
 }
 
-/* Sidebar Header with Social Icons */
+
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #444;
+    padding: 10px;
+    background-color: rgba(68, 68, 68, 0.9);
     border-bottom: 1px solid #ececec;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: space-around; /* This will distribute space evenly */
+    align-items: center;
+    width: 100%; /* Ensure full width */
+}
+
 .social-icons a {
+    margin: 0 15px; /* Moderate spacing, adjust as needed */
     color: #ffffff;
-    margin-left: 10px;
-    font-size: 18px;
-    transition: color 0.3s;
+    font-size: 40px; /* Keeping size as per your preference */
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
     color: #007BFF;
+    transform: scale(1.1);
 }
-
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 20px 0;
+}
 
 .sidebar::-webkit-scrollbar {
     width: 8px;
@@ -55,12 +76,8 @@
 
 
 .toggle-button {
-    position: absolute;
-    right: -50px;
-    top: 20px;
     background: #007BFF;
     color: #ffffff;
-    border: none;
     border-radius: 4px;
     padding: 8px 16px;
     cursor: pointer;
@@ -75,14 +92,23 @@
 
 .sidebar a {
     display: block;
+    width: 100%;
     margin: 10px 0;
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px 0;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+    background-color: rgba(68, 68, 68, 0.8);
 }
 
+
 .sidebar a:hover {
-    background-color: #444;
+    background-color: rgba(102, 102, 102, 0.8);
+    color: #007BFF;
+    transform: translateY(-3px);
 }
 
 /* Toggle Button Styles */
@@ -111,14 +137,14 @@
     font-size: 36px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Strong shadow for depth */
     outline: 2px solid #ffffff;
-    animation: pulse 2s infinite;
+    animation: pulse 3s infinite;
 }
 
 .menu-icon:hover {
-    color: #000000; /* Darker blue on hover for contrast */
+    color: #007BFF; /* Darker blue on hover for contrast */
 }
 .menu-icon:hover, .menu-icon:focus {
-    transform: translateY(-2px); /* Move up slightly on hover/focus */
+    transform: scale(1.1);
 }
 .close-icon {
     position: absolute;
@@ -136,17 +162,13 @@
     color: #cccccc; /* Lighter grey on hover for contrast */
 }
 @keyframes pulse {
-    0% {
+    0%, 100% {
         transform: scale(1);
         opacity: 1;
     }
     50% {
         transform: scale(1.1);
         opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
     }
 }
 
