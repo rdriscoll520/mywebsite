@@ -19,13 +19,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faTwitter}  size ='1x'/>
                     </a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/rory-driscoll-0317452b3/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faLinkedinIn} size ='1x' />
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} size ='1x' />
-                    </a>
-                    <a href="https://www.github.com/yourusername" target="_blank" rel="noopener noreferrer"> {/* Change 'yourusername' to your GitHub username */}
+                    <a href="https://www.github.com/rdriscoll520" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} size='1x' />
                     </a>
                 </div>
