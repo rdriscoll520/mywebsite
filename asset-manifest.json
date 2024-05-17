@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mywebsite/static/css/main.49df5990.css",
+    "main.js": "/mywebsite/static/js/main.8e01bd11.js",
+    "static/js/453.f69bbbff.chunk.js": "/mywebsite/static/js/453.f69bbbff.chunk.js",
+    "static/media/R. Driscoll-2.jpg": "/mywebsite/static/media/R. Driscoll-2.9b054644d55c779c6eef.jpg",
+    "static/media/PetAdoptionAgency.png": "/mywebsite/static/media/PetAdoptionAgency.b8bfa19c136a05453293.png",
+    "static/media/GameArcade1.png": "/mywebsite/static/media/GameArcade1.cd7b5e5ca73fe2535cd8.png",
+    "static/media/PetAdoptionAgency3.png": "/mywebsite/static/media/PetAdoptionAgency3.cab8fe966c2e2a56ee7c.png",
+    "static/media/PetAdoptionAgency2.png": "/mywebsite/static/media/PetAdoptionAgency2.5c6e9d5d97ccd20cb3ed.png",
+    "static/media/gamearcade2.png": "/mywebsite/static/media/gamearcade2.c883af0b7c573bfc7c5d.png",
+    "static/media/gamearcade3.png": "/mywebsite/static/media/gamearcade3.2e1f38c6ad7887665a94.png",
+    "index.html": "/mywebsite/index.html",
+    "main.49df5990.css.map": "/mywebsite/static/css/main.49df5990.css.map",
+    "main.8e01bd11.js.map": "/mywebsite/static/js/main.8e01bd11.js.map",
+    "453.f69bbbff.chunk.js.map": "/mywebsite/static/js/453.f69bbbff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49df5990.css",
+    "static/js/main.8e01bd11.js"
+  ]
+}
